@@ -1,0 +1,59 @@
+{
+	"name": "pi-codex-reconnect",
+	"version": "0.1.0",
+	"description": "Restore Codex WebSocket retries after transient connection failures in Pi.",
+	"type": "module",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Mizuno-Sachiko/Pi-Codex-Reconnect.git"
+	},
+	"homepage": "https://github.com/Mizuno-Sachiko/Pi-Codex-Reconnect#readme",
+	"bugs": {
+		"url": "https://github.com/Mizuno-Sachiko/Pi-Codex-Reconnect/issues"
+	},
+	"publishConfig": {
+		"access": "public",
+		"registry": "https://registry.npmjs.org/"
+	},
+	"keywords": [
+		"pi-package",
+		"codex",
+		"websocket",
+		"sse",
+		"reconnect"
+	],
+	"engines": {
+		"node": ">=22.19.0"
+	},
+	"files": [
+		"index.ts",
+		"config.example.json",
+		"README.md",
+		"LICENSE"
+	],
+	"pi": {
+		"extensions": [
+			"./index.ts"
+		]
+	},
+	"scripts": {
+		"check": "biome check . && tsc --noEmit",
+		"format": "biome check --write .",
+		"test": "node --test reconnect.test.ts"
+	},
+	"peerDependencies": {
+		"@earendil-works/pi-ai": "*",
+		"@earendil-works/pi-coding-agent": "*",
+		"typebox": "*"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.5.15",
+		"@earendil-works/pi-ai": "1.0.4",
+		"@earendil-works/pi-coding-agent": "1.0.4",
+		"@modelcontextprotocol/sdk": "^1.32.1",
+		"@types/node": "^24.0.0",
+		"typebox": "^1.3.27",
+		"typescript": "^7.0.2"
+	}
+}

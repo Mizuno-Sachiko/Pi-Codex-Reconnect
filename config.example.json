@@ -1,0 +1,7 @@
+{
+	"logging": {
+		"level": "warn",
+		"maxFileBytes": 1048576,
+		"maxFiles": 2
+	}
+}
